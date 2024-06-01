@@ -1,0 +1,30 @@
+/* grid c3 */
+.grid-c3 {
+  display: flex;
+  flex-direction: column;
+}
+.grid-c3-content {
+  flex: 1;
+}
+
+.notification-item{
+  padding: 15px 0;
+  padding-left: 20px; 
+  transition: text-decoration 0.8s ease;
+}
+
+.notification-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: aquamarine;
+ 
+}
+
+
+@media screen and (max-width: 992px) {
+  .grid-c3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 240px;
+  }
+}

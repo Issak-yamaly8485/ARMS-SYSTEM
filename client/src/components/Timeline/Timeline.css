@@ -1,0 +1,47 @@
+/* grid c7 */
+
+.grid-c7 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid-c7-content {
+  margin-top: -42px;
+  margin-bottom: -128px;
+}
+/* grid c7 */
+.grid-c7-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.grid-c7-content .progress-bar {
+  margin-left: -46px;
+}
+.grid-c7-content .data-list {
+  margin-left: -20px;
+}
+.grid-c7-content .data-item {
+  margin-bottom: 20px;
+}
+.grid-c7-content .data-item-value {
+  margin-top: 8px;
+  display: block;
+  font-weight: 600;
+}
+
+.data-list-item {
+  list-style-type: none; /* Remove default list styles */
+  padding: 10px 0px;
+}
+
+.data-list li {
+  margin-left: 10px; /* Adjust the margin to indent the list items */
+}
+
+.data-list p {
+  margin-left: 25px; /* Adjust the margin to indent the paragraphs */
+}
+
+@media screen and (min-width: 768px) {
+
+}

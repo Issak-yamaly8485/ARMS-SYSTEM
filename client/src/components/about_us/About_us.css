@@ -1,0 +1,41 @@
+.about_us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80vh;
+}
+.about-us-desc {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contact-us-card {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.contact-info {
+  padding-left: 50px;
+}
+.about_us h1 {
+    font-size: 2.5rem;
+  }
+.about_us h3 {
+  font-size: 1.5rem;
+}
+.about_us p {
+  font-size: 1.2rem;
+}
+.about_us tr {
+  font-size: 1.2rem;
+}
+.about_us td{
+    font-size: 1.3rem;
+}

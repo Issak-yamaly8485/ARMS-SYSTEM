@@ -1,0 +1,38 @@
+
+.stage{
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+}
+.stage span p {
+  font-size: 20px;
+  margin-top: 0;
+  display: inline-block;
+  padding: 20px 20px;
+  width: 500px;
+
+}
+
+.stage a {
+  color: white;
+  text-decoration: none;
+}
+
+.stage p:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all 0.2s ease;
+}
+
+.stage {
+  text-align: center;
+}
+
+.line {
+  width: 4px;
+  height: 15px;
+  background-color: rgb(1, 86, 101);
+  margin: 0;
+}
+.line:last-child {
+  display: none;
+}

@@ -1,0 +1,50 @@
+.hero-image {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 15px;
+  aspect-ratio: 16/10;
+  display: block;
+  object-fit: cover;
+}
+.card-title {
+  color: black;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.card-p {
+  color: var(--clr-black);
+  font-size: 14px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  margin: 1.5em auto;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  margin-bottom: 0rem;
+  padding: 1rem;
+}
+
+.anon-trash{
+  color: #111827;
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  transition: 0.3s;
+}
+
+.anon-trash:hover{
+  color: red;
+  cursor: pointer;
+}

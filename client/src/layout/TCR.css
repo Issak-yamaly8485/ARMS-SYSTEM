@@ -1,0 +1,12 @@
+.tcr-button{
+    background-color: var(--clr-primary);
+    padding: 10px 25px;
+    border-radius: 15px;
+    font-size: 32px;
+}
+
+.tcr-title{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 20px;
+}

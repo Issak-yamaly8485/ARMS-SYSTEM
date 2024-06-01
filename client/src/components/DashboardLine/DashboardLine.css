@@ -1,0 +1,18 @@
+
+.dashboard-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pie-container{
+    width: 100px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .pie-container{
+        width: 100px;
+    }
+  }
+  
