@@ -49,3 +49,4 @@ cd server && npm run dev
 
 Once the servers are running, you can access the frontend at http://localhost:3000 and the backend at http://localhost:5000
 
+
