@@ -21,7 +21,6 @@ const Timeline = () => {
         const fetchedData = await response.json();
 
         setTimelineData(fetchedData);
-        console.log(fetchedData);
         setLoading(false);
       } catch (error) {
         setError(error.message);

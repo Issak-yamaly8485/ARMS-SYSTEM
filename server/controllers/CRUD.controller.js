@@ -496,7 +496,89 @@ export const getAllPhase4 = async (req, res) => {
       }
     }
 
-    res.json(firstObjects);
+    let resultObject = {};
+
+    function isDateAhead(dateString) {
+      if (!dateString) {
+        return false;
+      }
+      var currentDate = new Date();
+
+      var parts = dateString.split("-");
+      var year = parseInt(parts[0]);
+      var month = parseInt(parts[1]) - 1;
+      var day = parseInt(parts[2]);
+
+      var givenDate = new Date(year, month, day);
+      return currentDate > givenDate;
+    }
+
+    for (const key in firstObjects) {
+      let theDate = firstObjects[key].endDate || firstObjects[key].actualDate;
+      console.log(key);
+      console.log(firstObjects[key]);
+      resultObject[key] = isDateAhead(theDate);
+    }
+
+    function returnNumber(value) {
+      return value ? 1 : 0;
+    }
+
+    function countTrues(booleanArray) {
+      const trues = booleanArray.filter(Boolean).length;
+      const percentage = (100 / booleanArray.length) * trues;
+      return +percentage.toFixed(2);
+    }
+
+    const percentageObject = {
+      externalstakeholders: countTrues([
+        resultObject.NominationOfBoard,
+        resultObject.EndorsementOfSenate,
+        resultObject.AnalysisReport,
+      ]),
+      assessors: countTrues([
+        resultObject.NominationOfBoard2,
+        resultObject.EndorsementOfSenate2,
+      ]),
+      survey: countTrues([
+        resultObject.Alumni,
+        resultObject.Employer,
+        resultObject.Student,
+        resultObject.AnalysisReportSurvey,
+      ]),
+      benchmarking: countTrues([
+        resultObject.BenchmarkingAnalysis,
+        resultObject.InstitutionVisit,
+      ]),
+      programcurriculum: countTrues([
+        resultObject.Workshop1,
+        resultObject.Workshop2,
+        resultObject.Workshop3,
+      ]),
+      selfswot: countTrues([
+        resultObject.SelfReviewReport,
+        resultObject.SubmissionOfSelfReviewReport,
+        resultObject.AssessorFeedbackReport,
+        resultObject.ReceiptofAssessorFeedbackReport,
+      ]),
+      crm: countTrues([
+        resultObject.CRM_PreperationProposal,
+        resultObject.CRM_EndorsementatKulliyyah,
+        resultObject.CRM_ReviewByKCA1,
+        resultObject.EndorsementatAQAC_DCM,
+        resultObject.RevisionofCRM,
+        resultObject.CRM_ReviewByKCA2,
+        resultObject.CRM_EndorsementatSenate,
+        resultObject.CRM_Proposal,
+      ]),
+      dokumensemakan: countTrues([
+        resultObject.PreparationofDokumenSemakan,
+        resultObject.DokumenReviewbyKCA,
+        resultObject.JKPTEndorsement,
+      ]),
+    };
+
+    res.json(percentageObject);
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal Server Error" });

@@ -80,7 +80,6 @@ const Account = () => {
           mobile,
           password,
         }).unwrap();
-        console.log("res submit handler", res);
         dispatch(setCredentials(res));
         toast.success("Profile updated successfully");
       } catch (err) {
@@ -89,7 +88,6 @@ const Account = () => {
     }
   };
 
-  console.log("profilePic", profilePic);
   return (
     <div>
       <h1>Profile</h1>

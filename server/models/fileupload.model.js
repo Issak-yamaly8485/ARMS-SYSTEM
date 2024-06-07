@@ -20,7 +20,6 @@ const InstitutionVisitSchema = mongoose.Schema(
   }
 );
 
-
 const FileSchema = mongoose.Schema(
   {
     file: {
@@ -89,6 +88,7 @@ const FileandDateSchema = mongoose.Schema(
 ////////// collection creation /////////////////
 /////////////////////////////////////////////////
 
+
 ///////// 1 Board of studies /////////////
 
 const EndorsementOfSenate = mongoose.model(
@@ -119,11 +119,11 @@ const AnalysisReportSurvey = mongoose.model("AnalysisReportSurvey", FileSchema);
 
 /////////////// 4 Benchmarking//////////////////////////
 
-const BenchmarkingAnalysis = mongoose.model(
-  "BenchmarkingAnalysis",
-  FileSchema
+const BenchmarkingAnalysis = mongoose.model("BenchmarkingAnalysis", FileSchema);
+const InstitutionVisit = mongoose.model(
+  "InstitutionVisit",
+  InstitutionVisitSchema
 );
-const InstitutionVisit = mongoose.model("InstitutionVisit", InstitutionVisitSchema);
 
 ////////////// 5 Program Curriculum//////////////////////
 

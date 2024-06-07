@@ -40,7 +40,6 @@ const Form2 = ({ route, onClose, page, descInput }) => {
           toast.success(data.message);
           return;
         }
-        console.log("Success:", data);
         toast.success("Item Added Successfully");
         onClose();
       })

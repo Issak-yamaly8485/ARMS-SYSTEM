@@ -30,7 +30,6 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();
-      console.log("res", res);
       dispatch(setCredentials({ ...res }));
       navigate("/");
     } catch (err) {

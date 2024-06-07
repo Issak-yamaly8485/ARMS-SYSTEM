@@ -54,7 +54,6 @@ const AccountModal = ({ id }) => {
           handleClose();
           return;
         }
-        console.log("Success:", data);
         handleClose();
         toast.success("Picture Updated Successfully");
       })

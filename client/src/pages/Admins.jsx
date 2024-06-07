@@ -78,7 +78,6 @@ const Admins = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log(formData);
     e.preventDefault();
     fetch(`http://localhost:5000/api/users/addadmin`, {
       method: "POST",
@@ -89,7 +88,6 @@ const Admins = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
         toast.success("Admin Created Successfully");
         handleClose();
       })

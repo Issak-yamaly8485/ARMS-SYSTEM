@@ -27,7 +27,6 @@ const FileForm = ({ route, onClose, page }) => {
           toast.error(data.message);
           return;
         }
-        console.log("Success:", data);
         toast.success("Item Added Successfully");
         onClose();
       })

@@ -21,7 +21,6 @@ const Form1 = ({ route, onClose, page }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("formData", formData);
     const formDataObj = new FormData();
 
     formDataObj.append("name", formData.name);
@@ -40,7 +39,6 @@ const Form1 = ({ route, onClose, page }) => {
     formDataObj.append("appointment_end_date", formData.appointment_end_date);
 
     formDataObj.append("file", file); // Append selected file
-    console.log(formDataObj);
     fetch(`http://localhost:5000/api/bit/${page}/${route}`, {
       method: "POST",
       body: formDataObj,
@@ -51,7 +49,6 @@ const Form1 = ({ route, onClose, page }) => {
           toast.error(data.message);
           return;
         }
-        console.log("Success:", data);
         toast.success("Item Added Successfully");
         onClose();
       })

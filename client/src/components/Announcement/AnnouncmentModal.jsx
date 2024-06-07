@@ -57,7 +57,6 @@ const AnnouncmentModal = () => {
     formDataObj.append("image", file);
     formDataObj.append("content", formData.content);
 
-    console.log(formData);
     fetch(`http://localhost:5000/api/dashboard/announcements/`, {
       method: "POST",
       body: formDataObj,
@@ -69,7 +68,6 @@ const AnnouncmentModal = () => {
           handleClose();
           return;
         }
-        console.log("Success:", data);
         handleClose();
         toast.success("Item Added Successfully");
       })

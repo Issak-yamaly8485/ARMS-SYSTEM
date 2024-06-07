@@ -33,9 +33,6 @@ const DataTable = ({
   };
 
   const pageSection = currentroute.split("/")[1].toLowerCase();
-  useEffect(() => {
-    console.log(pageSection);
-  }, []);
   const isAdmin = () => {
     return userInfo.role === "admin" || userInfo.role === "superadmin";
   };
@@ -117,19 +114,17 @@ const DataTable = ({
           <Typography sx={{ padding: 2, color: "black" }} variant="h5">
             {title}
           </Typography>
-          {isAdmin() &&
-            pageSection !==
-              "tcr" && (
-                <>
-                  <FormModal
-                    descInput={descInput}
-                    page={page}
-                    title={title}
-                    route={route}
-                    form={form}
-                  />
-                </>
-              )}
+          {isAdmin() && pageSection !== "tcr" && (
+            <>
+              <FormModal
+                descInput={descInput}
+                page={page}
+                title={title}
+                route={route}
+                form={form}
+              />
+            </>
+          )}
         </div>
 
         {desiredTable(form)}
